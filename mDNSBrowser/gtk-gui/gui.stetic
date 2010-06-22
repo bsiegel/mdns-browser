@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<stetic-interface>
+  <configuration>
+    <images-root-path>..</images-root-path>
+    <target-gtk-version>2.12</target-gtk-version>
+  </configuration>
+  <import>
+    <widget-library name="glade-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <widget-library name="..\bin\Debug\mDNSBrowser.exe" internal="true" />
+  </import>
+  <widget class="Gtk.Window" id="MainWindow" design-size="728 532">
+    <property name="MemberName" />
+    <property name="Title" translatable="yes">mDNS Browser</property>
+    <property name="Icon">resource:mDNSBrowser.avahi.png</property>
+    <property name="WindowPosition">CenterOnParent</property>
+    <signal name="DeleteEvent" handler="OnDeleteEvent" />
+    <child>
+      <widget class="Gtk.HPaned" id="hpaned1">
+        <property name="MemberName" />
+        <property name="CanFocus">True</property>
+        <property name="Position">215</property>
+        <child>
+          <widget class="Gtk.NodeView" id="nvServices">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="EnableSearch">False</property>
+            <property name="HeadersVisible">False</property>
+          </widget>
+          <packing>
+            <property name="Resize">False</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.NodeView" id="nvClients">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+          </widget>
+        </child>
+      </widget>
+    </child>
+  </widget>
+</stetic-interface>

@@ -1,0 +1,7 @@
+syntax: regexp
+(?i)\/bin\/
+(?i)\/obj\/
+(?i)\/clientbin\/
+(?i)\.suo$
+(?i)\.user$
+(?i)\.userprefs$
